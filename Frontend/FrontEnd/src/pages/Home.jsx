@@ -13,7 +13,7 @@ export default function Home() {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("http://localhost:5555/books/")
+      .get("https://bookstoreapp-1-k338.onrender.com/")
       .then((res) => {
         setBooks(res.data.data);
         console.log(res.data.data);

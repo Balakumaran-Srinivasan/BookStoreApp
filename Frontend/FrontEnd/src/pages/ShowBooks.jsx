@@ -12,7 +12,7 @@
       const {id} = useParams();
       useEffect(()=>{
                 setLoading(true);
-                axios.get('http://localhost:5555/books/'+id)
+                axios.get('https://bookstoreapp-1-k338.onrender.com/'+id)
                 .then((res)=>{
                      setBooks(res.data);
                      setLoading(false);
