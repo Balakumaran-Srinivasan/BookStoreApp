@@ -47,8 +47,14 @@ export default function BookSingleCard({ book }) {
     </div>
   );
 }
+
+
 BookSingleCard.propTypes = {
-  book: PropTypes.objectOf(PropTypes.book),
-  
-  
-}
+  book: PropTypes.shape({
+    publishYear: PropTypes.number.isRequired, // Required number
+    _id: PropTypes.string.isRequired,        // Required string
+    title: PropTypes.string.isRequired,        // Required string
+    author: PropTypes.string.isRequired,       // Required string
+    // Add other properties as needed
+  }).isRequired,                               // Make the entire object required
+ };

@@ -11,7 +11,6 @@ export default function BookCard({ books }) {
     </div>
   );
 }
-
 BookCard.propTypes = {
-  books: PropTypes.objectOf(PropTypes.books)
-}
+  books: PropTypes.arrayOf(PropTypes.object).isRequired,
+};    

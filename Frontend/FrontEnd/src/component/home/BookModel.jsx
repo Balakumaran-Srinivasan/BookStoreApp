@@ -31,6 +31,7 @@ export default function BookModel({book ,onClose}) {
     </div>
   )
 }
+
 BookModel.propTypes = {
   book: PropTypes.shape({
     publishYear: PropTypes.number.isRequired, // Required number
