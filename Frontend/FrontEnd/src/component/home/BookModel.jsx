@@ -1,7 +1,7 @@
 import { AiOutlineClose } from "react-icons/ai";
 import { BiUserCircle } from "react-icons/bi";
 import { PiBookOpenTextLight } from "react-icons/pi";
- 
+ import{PropTypes} from 'prop-types'
 
 export default function BookModel({book ,onClose}) {
   return (
@@ -31,3 +31,13 @@ export default function BookModel({book ,onClose}) {
     </div>
   )
 }
+BookModel.propTypes = {
+  book: PropTypes.shape({
+    publishYear: PropTypes.number.isRequired, // Required number
+    _id: PropTypes.string.isRequired,        // Required string
+    title: PropTypes.string.isRequired,        // Required string
+    author: PropTypes.string.isRequired,       // Required string
+    // Add other properties as needed
+  }).isRequired,                               // Make the entire object required
+  onClose: PropTypes.func.isRequired,         // Required function
+};

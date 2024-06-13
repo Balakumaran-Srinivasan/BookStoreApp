@@ -3,7 +3,8 @@
 import { BsInfoCircle } from 'react-icons/bs'
 import { AiOutlineEdit } from 'react-icons/ai'
 import { MdOutlineDelete } from 'react-icons/md'
- 
+import {PropTypes} from 'prop-types'
+
  export default function BookTable({books}) {
      
     return (
@@ -65,4 +66,7 @@ import { MdOutlineDelete } from 'react-icons/md'
 </table>
    )
  }
+ BookTable.propTypes = {
+    books: PropTypes.objectOf(PropTypes.books)
+  }
  

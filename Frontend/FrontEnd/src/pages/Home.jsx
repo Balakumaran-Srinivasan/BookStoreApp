@@ -13,10 +13,10 @@ export default function Home() {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("https://bookstoreapp-1-k338.onrender.com/")
+      .get("https://bookstoreapp-1-k338.onrender.com/books")
       .then((res) => {
         setBooks(res.data.data);
-        console.log(res.data.data);
+        // console.log(res.data.data);
         setLoading(false);
       })
       .catch((error) => {

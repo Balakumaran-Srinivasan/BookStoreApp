@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import {PropTypes} from 'prop-types'
 
 import { PiBookOpenTextLight } from "react-icons/pi";
 import { BiUserCircle, BiShow } from "react-icons/bi";
@@ -45,4 +46,9 @@ export default function BookSingleCard({ book }) {
       )}
     </div>
   );
+}
+BookSingleCard.propTypes = {
+  book: PropTypes.objectOf(PropTypes.book),
+  
+  
 }

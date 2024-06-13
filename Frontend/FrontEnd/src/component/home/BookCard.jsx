@@ -1,7 +1,7 @@
-
 import BookSingleCard from "./BookSingleCard";
-
+import {PropTypes} from 'prop-types'
 export default function BookCard({ books }) {
+    
   return (
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 grid-cols-4">
       {books.map((item) => {
@@ -10,4 +10,8 @@ export default function BookCard({ books }) {
       })}
     </div>
   );
+}
+
+BookCard.propTypes = {
+  books: PropTypes.objectOf(PropTypes.books)
 }
